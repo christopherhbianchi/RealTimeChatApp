@@ -1,7 +1,7 @@
 var Messages = require('../models/messageModel.js');
 var bodyParser = require('body-parser');
 
-module.exports = function(app){
+module.exports = function(app, io){
 
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({
@@ -22,6 +22,9 @@ module.exports = function(app){
     });//closes newMessage
     newMessage.save(newMessage, function(err){
       if(err) throw err;
+
+      //emitting the message to all clients
+      io.emit('message', newMessage);
       response.send('Success');
     });//closes save
   });//closes post

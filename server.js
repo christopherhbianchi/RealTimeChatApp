@@ -15,7 +15,7 @@ mongoose.connect(config.getDbConnectionString());
 app.use(express.static(__dirname + '/public'));
 
 setupController(app);
-messageController(app);
+messageController(app, io);
 
 io.on('connection', function(socket){
   console.log('user connected');
