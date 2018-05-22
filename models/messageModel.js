@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 var messageSchema = ({
   username:{
     type:"String",
-    unique:true,
+    unique:false,
     require:true,
     trim:true
   },

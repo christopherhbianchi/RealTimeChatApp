@@ -15,6 +15,17 @@ module.exports = function(app){
     });//closes find
   });//closes get, to return all of the messages
 
+  app.post('/api/messages', function(request, response){
+    var newMessage = Messages({
+      username:request.body.username,
+      content:request.body.content
+    });//closes newMessage
+    newMessage.save(newMessage, function(err){
+      if(err) throw err;
+      response.send('Success');
+    });//closes save
+  });//closes post
+
 
 
 
