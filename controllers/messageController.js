@@ -8,7 +8,7 @@ module.exports = function(app, io){
     extended:true
   }));//closes second use
 
-  app.get('https://calm-taiga-67187.herokuapp.com/api/messages', function(request, response){
+  app.get('https://calm-taiga-67187.herokuapp.com//api/messages', function(request, response){
     Messages.find(function(err, results){
       if(err) throw err;
       response.send(results);
