@@ -1,11 +1,11 @@
 # RealTime Chat Application
 
-Overview:
+## Overview:
 This is a chat application that allows multiple users to communicate in real time,
 in a chat room style forum. Users may come in, choose their username, and begin
 exchanging messages across the message board.
 
-Technologies:
+## Technologies:
 This is a NodeJS application which utilizes express, and socket.io modules for
 the server layer. The socket.io module provides server-side, and client-side
 components with similar APIs. In particular, it allows event handling functionality
