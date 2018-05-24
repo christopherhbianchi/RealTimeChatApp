@@ -35,7 +35,7 @@ socket.on('message', addMessage); //the data sent from the server has a message 
 function loadData(){
   var messages = $.ajax({
     type:"GET",
-    url:"https://calm-taiga-67187.herokuapp.com//api/messages",
+    url:"/api/messages",
     datatype:"json"
   });
   messages.done(refreshData); //the data from the $.ajax method (list of messages), is passed to refreshData
