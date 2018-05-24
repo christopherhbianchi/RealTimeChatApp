@@ -1,6 +1,7 @@
 //Similar to our app.js
 var express = require('express');
 var app = express();
+var port = process.env.PORT || 3000;
 
 //set up socket.io on the backend
 var http = require('http').Server(app);
@@ -21,11 +22,19 @@ io.on('connection', function(socket){
   console.log('user connected');
 });//closes io.on
 
-//we use a lambda expression verus just writing "function(e){ ... }"
+
+//This starts the http server, listening for connection, and we tell it to
+//listen on that "port" var created above, which in this case will be auto-assigned
+//by heroku, or will just be 3000
+var server = http.listen(port, () => {
+  console.log('Server is listening on port %d', port);
+})
+/*
+- we use a lambda expression verus just writing "function(e){ ... }"
 var server = http.listen(3000, () => {
   console.log('Server is listening on port', server.address().port);
 });
+*/
 
 
-// var port = process.env.PORT || 3000;
-// app.listen(port);
+app.listen(port);
