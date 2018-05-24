@@ -27,7 +27,7 @@ io.on('connection', function(socket){
 //listen on that "port" var created above, which in this case will be auto-assigned
 //by heroku, or will just be 3000
 var server = http.listen(port, () => {
-  console.log('Server is listening on port %d', port);
+  console.log('Server is listening on port %d', this.address().port);
 })
 /*
 - we use a lambda expression verus just writing "function(e){ ... }"
