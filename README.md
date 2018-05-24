@@ -9,8 +9,9 @@ exchanging messages across the message board.
 This is a NodeJS application which utilizes express, and socket.io modules for
 the server layer. The socket.io module provides server-side, and client-side
 components with similar APIs. In particular, it allows event handling functionality
-to not only the server, but also the client. This allows clients to listen for, and
-handle events that are emitted from the server itself. This allows the chat room
-to be updated in real time, as a new message is posted to the forum as the server
-sends an event to each of it's clients when a new message has been created and saved
-in the database. The database is handled using the mongoose module, and MongoDB.
+to not only the server, but also the client (bi-directional event emitting and listening).
+This allows clients to listen for, and handle events that are emitted from the
+server itself. This allows the chat room to be updated in real time, as a new message
+is posted to the forum as the server sends an event to each of it's clients when
+a new message has been created and saved in the database. The database is handled
+using the mongoose module, and MongoDB.
