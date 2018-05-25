@@ -47,7 +47,7 @@ function refreshData(data, status){
   $("#messages").empty();
   data.forEach(function(element){
 
-    $("#messages").append(`<div class="box3 sb14"><h1>${element.content}</h1><p>${element.username}</p></div>`);
+    $("#messages").append(`<div class="box3 sb14"><h1>${element.content}</h1><p>- ${element.username}</p></div>`);
 
     // $("#messages").append(`<h4> ${element.username} </h4> <p> ${element.content} </p>`);
 
@@ -80,5 +80,5 @@ function createMessage(message){
 
 //function that allows us to add messages to our message history
 function addMessage(message){
-  $("#messages").append(`<h4> ${message.username} </h4> <p> ${message.content} </p>`);
+  $("#messages").append(`<div class="box3 sb14"><h1>${element.content}</h1><p>- ${element.username}</p></div>`);
 }
