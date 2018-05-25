@@ -46,7 +46,21 @@ function refreshData(data, status){
   console.log("testing: " + data);
   $("#messages").empty();
   data.forEach(function(element){
-    $("#messages").append(`<h4> ${element.username} </h4> <p> ${element.content} </p>`);
+
+    $("#messages").append(`<hgroup class="speech-bubble"><div class="bubble-text"><h1>${element.content}</h1><p>${element.username}</p></div></hgroup>`);
+
+    // $("#messages").append(`<h4> ${element.username} </h4> <p> ${element.content} </p>`);
+
+    /*
+    <hgroup class="speech-bubble">
+    <div class="bubble-text">
+	<h1>${element.username}</h1>
+	<h2>CSS speech bubbles made easy!</h2>
+  </div>
+</hgroup>
+    */
+
+
   });//closes forEach
 }//closes callback
 
