@@ -36,5 +36,6 @@ var server = http.listen(3000, () => {
 });
 */
 
-
-app.listen(port);
+// *** we have the http server listen on that port... so trying to have the app
+//listen on the same port will break it
+// --- app.listen(port);
