@@ -47,7 +47,7 @@ function refreshData(data, status){
   $("#messages").empty();
   data.forEach(function(element){
 
-    $("#messages").append(`<hgroup class="speech-bubble"><div class="bubble-text"><h1>${element.content}</h1><p>${element.username}</p></div></hgroup>`);
+    $("#messages").append(`<div class="box3 sb14"><h1>${element.content}</h1><p>${element.username}</p></div>`);
 
     // $("#messages").append(`<h4> ${element.username} </h4> <p> ${element.content} </p>`);
 
