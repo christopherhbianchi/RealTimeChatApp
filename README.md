@@ -1,11 +1,26 @@
 # RealTime Chat Application
 
-## Overview:
-This is a chat application that allows multiple users to communicate in real time,
-in a chat room style forum. Users may come in, choose their username, and begin
+
+## Overview
+This is a chat application that allows multiple users to communicate in real time, in a chat room style forum. Users may come in, choose their username, and begin
 exchanging messages across the message board.
 
-## Technologies:
+
+## Core Functionality
+1. Users are able to chat inside the forum application in real-time.
+2. Users are able to create, read, update, and delete their posted messages.
+
+
+## Technologies Used
+* NodeJS
+* Express
+* Socket.IO
+* jQuery
+* Mongoose
+* MongoDB
+
+
+## How Technologies Fit Together
 This is a NodeJS application which utilizes express, and socket.io modules for
 the server layer. The socket.io module provides server-side, and client-side
 components with similar APIs. In particular, it allows event handling functionality
