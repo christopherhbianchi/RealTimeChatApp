@@ -25,7 +25,6 @@ $(document).ready(function(e){
     $("#content").val('');
 
   });//closes send click event
-
 }); //closes $(document).ready()...
 
 //an event listener so the FRONT END can listen to events from the SERVER (diff than usual!)
